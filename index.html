@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#fff8e7">
+
+    <meta
+        name="description"
+        content="Kisah Arnab dan Kura-Kura, sebuah buku cerita digital interaktif dengan audio dan ilustrasi untuk kanak-kanak."
+    >
+
+    <title>Kisah Arnab dan Kura-Kura | Buku Cerita Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MUKA DEPAN BUKU -->
+
+    <section
+        id="cover"
+        class="cover"
+        aria-label="Muka depan buku Kisah Arnab dan Kura-Kura"
+    >
+
+        <img
+            id="gambar-cover"
+            src="images/coversatu.png"
+            alt="Arnab dan Kura-Kura di dalam hutan"
+            fetchpriority="high"
+        >
+
+        <div class="cover-content">
+
+            <h1>KISAH ARNAB DAN KURA-KURA</h1>
+
+            <p>Buku Cerita Digital Interaktif</p>
+
+            <button
+                id="btn-mula"
+                type="button"
+                aria-label="Mula membaca Kisah Arnab dan Kura-Kura"
+            >
+                Mula Membaca 📖
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HALAMAN CERITA -->
+
+    <main id="halaman-cerita" hidden>
+
+        <p
+            id="nombor-halaman"
+            aria-live="polite"
+            aria-atomic="true"
+        ></p>
+
+        <div
+            id="teks-cerita"
+            aria-label="Teks cerita"
+        ></div>
+
+        <img
+            id="gambar-cerita"
+            src=""
+            alt="Ilustrasi cerita Arnab dan Kura-Kura"
+            loading="eager"
+        >
+
+
+        <!-- KAWALAN AUDIO -->
+
+        <div class="kawalan-audio">
+
+            <button
+                id="btn-baca-semula"
+                type="button"
+                aria-label="Baca semula audio halaman ini"
+            >
+                🔁 Baca Semula Ayat
+            </button>
+
+        </div>
+
+
+        <!-- NAVIGASI HALAMAN -->
+
+        <nav
+            class="butang-navigasi"
+            aria-label="Navigasi buku cerita"
+        >
+
+            <button
+                id="btn-sebelum"
+                type="button"
+                aria-label="Halaman sebelumnya"
+                title="Halaman sebelumnya"
+            >
+                ❮
+            </button>
+
+            <button
+                id="btn-seterusnya"
+                type="button"
+                aria-label="Halaman seterusnya"
+                title="Halaman seterusnya"
+            >
+                ❯
+            </button>
+
+        </nav>
+
+    </main>
+
+
+    <!-- BUTANG FULL SCREEN UNTUK MOBILE SAHAJA -->
+
+    <button
+        id="btn-fullscreen"
+        type="button"
+        aria-label="Aktifkan paparan skrin penuh"
+        aria-pressed="false"
+    >
+        ⛶ Full screen
+    </button>
+
+
+    <!-- PEMAIN AUDIO -->
+
+    <audio
+        id="audio-cerita"
+        preload="auto"
+    ></audio>
+
+
+    <!-- JAVASCRIPT UTAMA -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
